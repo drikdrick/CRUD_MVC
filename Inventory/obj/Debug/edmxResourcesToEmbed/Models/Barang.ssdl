@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="inventoryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="barang">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nama_barang" Type="varchar" MaxLength="50" />
+    <Property Name="deskripsi" Type="text" />
+    <Property Name="jumlah" Type="int" />
+    <Property Name="harga" Type="int" />
+    <Property Name="gambar" Type="varchar" MaxLength="50" />
+    <Property Name="created_at" Type="datetime" />
+    <Property Name="created_by" Type="varchar" MaxLength="50" />
+    <Property Name="update_at" Type="datetime" />
+    <Property Name="update_by" Type="varchar" MaxLength="50" />
+    <Property Name="active" Type="int" />
+  </EntityType>
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nama_pembeli" Type="varchar" MaxLength="50" />
+    <Property Name="alamat" Type="varchar(max)" />
+    <Property Name="no_telepon" Type="varchar" MaxLength="50" />
+    <Property Name="id_barang" Type="int" />
+    <Property Name="jumlah" Type="int" />
+    <Property Name="status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_order_barang">
+    <End Role="barang" Type="Self.barang" Multiplicity="0..1" />
+    <End Role="order" Type="Self.order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="barang">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="order">
+        <PropertyRef Name="id_barang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="inventoryModelStoreContainer">
+    <EntitySet Name="barang" EntityType="Self.barang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="order" EntityType="Self.order" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_order_barang" Association="Self.FK_order_barang">
+      <End Role="barang" EntitySet="barang" />
+      <End Role="order" EntitySet="order" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
