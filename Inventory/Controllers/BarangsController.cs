@@ -9,7 +9,7 @@ namespace Inventory.Controllers
 {
     public class BarangsController : Controller
     {
-        inventoryEntities dbModel = new inventoryEntities();
+        inventoryEntitiez dbModel = new inventoryEntitiez();
         // GET: Barangs
         public ActionResult Barang()
         {
@@ -30,7 +30,13 @@ namespace Inventory.Controllers
             dbModel.barangs.Add(obj);
             dbModel.SaveChanges();
 
-            return View("Barang");
+            return View("ListBarang");
+        }
+
+        public ActionResult ListBarang()
+        {
+            var res = dbModel.barangs.ToList();
+            return View(res);
         }
     }
 }

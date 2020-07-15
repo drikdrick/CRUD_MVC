@@ -14,12 +14,6 @@ namespace Inventory.Models
     
     public partial class barang
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public barang()
-        {
-            this.orders = new HashSet<order>();
-        }
-    
         public int id { get; set; }
         public string nama_barang { get; set; }
         public string deskripsi { get; set; }
@@ -31,8 +25,5 @@ namespace Inventory.Models
         public Nullable<System.DateTime> update_at { get; set; }
         public string update_by { get; set; }
         public Nullable<int> active { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<order> orders { get; set; }
     }
 }

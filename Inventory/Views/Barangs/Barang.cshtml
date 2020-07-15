@@ -15,7 +15,7 @@
 
     <div class="form-group">
         <label>Deskripsi</label>
-        @Html.TextAreaFor(x => x.nama_barang, new { @class = "form-control", @rows = "10" })
+        @Html.TextAreaFor(x => x.deskripsi, new { @class = "form-control", @rows = "5" })
     </div>
 
     <div class="form-group">
@@ -30,7 +30,7 @@
 
     <div class="form-group">
         <label>Aktif</label>
-        @Html.EditorFor(x => x.harga, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.EditorFor(x => x.active, new { htmlAttributes = new { @class = "form-control" } })
     </div>
 
     <div class="form-group">

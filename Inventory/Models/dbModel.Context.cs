@@ -13,10 +13,10 @@ namespace Inventory.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class inventoryEntities : DbContext
+    public partial class inventoryEntitiez : DbContext
     {
-        public inventoryEntities()
-            : base("name=inventoryEntities")
+        public inventoryEntitiez()
+            : base("name=inventoryEntitiez")
         {
         }
     
@@ -26,6 +26,5 @@ namespace Inventory.Models
         }
     
         public virtual DbSet<barang> barangs { get; set; }
-        public virtual DbSet<order> orders { get; set; }
     }
 }

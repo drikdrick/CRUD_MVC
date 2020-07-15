@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Inventory.Models.barang>
+
+@{
+    ViewBag.Title = "ListBarang";
+}
+
+<h2>ListBarang</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Barang")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Nama Barang
+        </th>
+        <th>
+            Deskripsi
+        </th>
+        <th>
+            Stok
+        </th>
+        <th>
+            Harga
+        </th>
+        <th>
+            Tanggal Entri
+        </th>
+        <th>Action</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nama_barang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.deskripsi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.jumlah)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.harga)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.created_at)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
