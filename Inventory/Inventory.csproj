@@ -129,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BarangController.cs" />
+    <Compile Include="Controllers\BarangsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -211,6 +212,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Barang\Index.cshtml" />
     <Content Include="Views\Barang\Create.cshtml" />
+    <Content Include="Views\Barangs\Barang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

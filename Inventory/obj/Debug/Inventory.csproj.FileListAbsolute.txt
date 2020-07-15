@@ -51,6 +51,8 @@ C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\roslyn\vbc.rsp
 C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\roslyn\VBCSCompiler.exe
 C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\Antlr3.Runtime.dll
+C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\EntityFramework.dll
+C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\EntityFramework.SqlServer.dll
 C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\Newtonsoft.Json.dll
@@ -62,6 +64,8 @@ C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\System.Web.WebPages.Deploy
 C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\System.Web.WebPages.dll
 C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\System.Web.WebPages.Razor.dll
 C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\WebGrease.dll
+C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\EntityFramework.xml
+C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\EntityFramework.SqlServer.xml
 C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\System.Web.Helpers.xml
 C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\System.Web.Mvc.xml
 C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\System.Web.Optimization.xml
@@ -76,7 +80,4 @@ C:\Users\COMMAND\source\repos\Inventory\Inventory\obj\Debug\Inventory.csproj.Cor
 C:\Users\COMMAND\source\repos\Inventory\Inventory\obj\Debug\Inventory.csproj.CopyComplete
 C:\Users\COMMAND\source\repos\Inventory\Inventory\obj\Debug\Inventory.dll
 C:\Users\COMMAND\source\repos\Inventory\Inventory\obj\Debug\Inventory.pdb
-C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\EntityFramework.dll
-C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\EntityFramework.SqlServer.dll
-C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\EntityFramework.xml
-C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\EntityFramework.SqlServer.xml
+C:\Users\COMMAND\source\repos\Inventory\Inventory\obj\Debug\Inventory.csprojAssemblyReference.cache

@@ -32,12 +32,23 @@ namespace Inventory.Controllers
 
         // POST: Barang/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(barang brg)
         {
             try
             {
-                
-
+                barang obj = new barang();
+                obj.nama_barang = brg.nama_barang;
+                obj.deskripsi = brg.deskripsi;
+                obj.jumlah = brg.jumlah;
+                obj.harga = brg.harga;
+                obj.gambar = brg.gambar;
+                obj.active = brg.active;
+                obj.created_at = DateTime.Now;
+                using (inventoryEntities dbModel = new inventoryEntities())
+                {
+                    dbModel.barangs.Add(obj);
+                    dbModel.SaveChanges();
+                }
                 return RedirectToAction("Index");
             }
             catch
