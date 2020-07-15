@@ -72,7 +72,6 @@ C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\System.Web.WebPages.Razor.
 C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\Newtonsoft.Json.xml
 C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\Antlr3.Runtime.pdb
 C:\Users\COMMAND\source\repos\Inventory\Inventory\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\COMMAND\source\repos\Inventory\Inventory\obj\Debug\Inventory.csprojAssemblyReference.cache
 C:\Users\COMMAND\source\repos\Inventory\Inventory\obj\Debug\Inventory.csproj.CoreCompileInputs.cache
 C:\Users\COMMAND\source\repos\Inventory\Inventory\obj\Debug\Inventory.csproj.CopyComplete
 C:\Users\COMMAND\source\repos\Inventory\Inventory\obj\Debug\Inventory.dll
