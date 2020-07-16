@@ -1,6 +1,7 @@
 ﻿using Inventory.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,14 +12,15 @@ namespace Inventory.Controllers
     {
         inventoryEntitiez dbModel = new inventoryEntitiez();
         // GET: Barangs
-        public ActionResult Barang()
+        public ActionResult Barang(barang objek)
         {
-            return View();
+            return View(objek);
         }
         [HttpPost]
         public ActionResult AddBarang(barang model)
         {
             barang obj = new barang();
+            obj.id = model.id;
             obj.nama_barang = model.nama_barang;
             obj.jumlah = model.jumlah;
             obj.harga = model.harga;
@@ -27,10 +29,20 @@ namespace Inventory.Controllers
             obj.gambar = model.gambar;
             obj.created_at = DateTime.Now;
 
-            dbModel.barangs.Add(obj);
-            dbModel.SaveChanges();
+            if(model.id == 0)
+            {
+                dbModel.barangs.Add(obj);
+                dbModel.SaveChanges();
+            }
+            else
+            {
+                model.update_at = DateTime.Now;
+                dbModel.Entry(obj).State = EntityState.Modified;
+                dbModel.SaveChanges();
+            }
 
-            return View("ListBarang");
+            var list = dbModel.barangs.ToList();
+            return View("ListBarang", list);
         }
 
         public ActionResult ListBarang()
