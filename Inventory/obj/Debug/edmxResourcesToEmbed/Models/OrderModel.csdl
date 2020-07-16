@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="orderModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="nama_pembeli" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="alamat" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="no_telepon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_barang" Type="Int32" />
+    <Property Name="jumlah" Type="Int32" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="update_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="inventoryEntitiess" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="orders" EntityType="Self.order" />
+  </EntityContainer>
+</Schema>
