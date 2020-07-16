@@ -38,5 +38,16 @@ namespace Inventory.Controllers
             var res = dbModel.barangs.ToList();
             return View(res);
         }
+
+        public ActionResult Delete(int id)
+        {
+            var res = dbModel.barangs.Where(x=>x.id==id).First();
+            dbModel.barangs.Remove(res);
+            dbModel.SaveChanges();
+
+            var list = dbModel.barangs.ToList();
+
+            return View("ListBarang", list);
+        }
     }
 }
